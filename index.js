@@ -31,6 +31,8 @@ module.exports = (options = {
         return done(withError('Streaming is not supported. You might want to use gulp-buffer or vinyl-buffer to get around this issue.'));
     }
 
+    // TODO: Merge default configuration object and supplied configuration object to apply defaults to missing fields
+
     // Minify CSS using Crass
     try {
         const parsedCode = crass.parse(file.contents.toString());
