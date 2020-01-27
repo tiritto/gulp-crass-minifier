@@ -1,0 +1,45 @@
+{
+  "name": "gulp-crass-minifier",
+  "version": "1.0.0",
+  "description": "Gulp plugin serving as wrapper for Crass optimizer.",
+  "author": "Dawid Niedźwiedzki (https://dawid.niedzwiedzki.tech/)",
+  "license": "MIT",
+  "homepage": "https://github.com/tiritto/gulp-crass-minifier#readme",
+  "bugs": {
+    "url": "https://github.com/tiritto/gulp-crass-minifier/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiritto/gulp-crass-minifier.git"
+  },
+  "keywords": [
+    "css",
+    "minify",
+    "uglify",
+    "crass",
+    "minify-css",
+    "uglify-css",
+    "crass-css",
+    "gulp-minify-css",
+    "gulp-crass",
+    "gulp-crass-minifier",
+    "crass-minifier",
+    "gulpplugin",
+    "gulpfriendly",
+    "compress",
+    "minifier",
+    "optimise",
+    "optimisation",
+    "css3",
+    "parser"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "crass": "^0.12.3",
+    "plugin-error": "^1.0.1",
+    "through2": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=10.16.0"
+  }
+}
