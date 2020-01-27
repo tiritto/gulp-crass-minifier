@@ -58,6 +58,19 @@ browser_min.ie | number | 11 | Lowest supported version for Google Chrome
 
 ## Frequent Questions
 
+#### Why Crass? What makes it better from other minifiers?
+Unlike vast majority of other minifiers, Crass parses full CSS tree allowing it to perform all kind of optimizations that wouldn't be otherwise possible on string source based minifiers. This approach causes Cross to be the slowest but yet the most effective in most situations, which is further evidenced in [goalsmashers' css minification benchmark](https://goalsmashers.github.io/css-minification-benchmark/).
+
+#### Isn't Crass outdated and not maintained anymore?
+That's actually a hard question. Last commit in Crass repository comes from July 2019 and the last actual change in the library was back in February 2018 so it might feel a little abandoned. However, to this day Crass remains one of if not the most effective CSS minifier available in NPM repository and could be easily be claimed as feature-complete.
+
+Note that Crass is published on MIT license, meaning that you can fork the project at any time and take initiative in its development at any point in time. Just don't forget to let me know as I would love to gulpify your fork as well ;-)
+
+#### Using Crass is slowing down my development forcing me to wait!
+If (somehow) you find yourself in a situation where Crass minification time reduces your programming performance, it is advised to turn off minification (`optimize: false`) during development and use it on-demand, for example while creating production build.
+
+That being said, unless you operate on huge CSS files or use very low end computer for development, you shouldn't really notice any delays in your workflow. 
+
 #### What is the difference between `gulp-crass-minifier` and `gulp-crass`?
 `gulp-crass` was created by another person that apparently doesn't maintain it anymore since not a single commit was made since 2017. `gulp-crass-minifier` is my own wrapper written "from scratch" and actively maintained since 2020.
 
