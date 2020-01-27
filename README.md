@@ -1,20 +1,14 @@
 # gulp-crass-minifier
+`gulp-crass-minifier` is [Gulp](https://gulpjs.com) plugin to minify CSS files using [Crass](https://github.com/mattbasta/crass/) library.
 
 ## How to install
 ```
 npm install --save-dev gulp-crass-minifier
 ```
 
-<aside class="warning">
-Due to known vulnerability in Crass you should never use `gulp-crass-minifier` nor `crass` 
-</aside>
-
-> :warning: **If you are using mobile browser**: Be very careful here!
+> :warning: **SECURITY WARNING** :warning:
 >
->
-
->[!WARNING]
->This is a warning
+> Due to known [vulnerability](https://github.com/mattbasta/crass/issues/77) in Crass library you shouldn't use `gulp-crass-minifier` nor `crass` on production! Make sure to minify your files on development environment and not on production. Please note that already **minified files pose no threat** and can be safely placed in production without any worries.
 
 ## Examples
 
@@ -63,14 +57,14 @@ browser_min.firefox | number | `31` | Lowest supported version of Firefox
 browser_min.opera | number | `26` | Lowest supported version of Opera
 browser_min.ie | number | `11` | Lowest supported version of Internet Explorer
 
-## Current TODO's
- * Merge default configuration object and supplied configuration object to apply defaults to missing fields.
- * It might be a good idea to create some tests.
+## Plugin TODO List
+This section contains list of things that should be implemented or changed in `gulp-crass-minifier` itself. I will most likely do some of those things on my own eventually when I get some time. However, if you want to help out and contribute towards this plugin,  feel free to pick up something from the list below!
+ * Create some tests to make sure everything works properly whenever there is an update;
 
 ## Frequent Questions
 
 ### Why Crass? What makes it better from other minifiers?
-Unlike vast majority of other minifiers, Crass parses full CSS tree allowing it to perform all kind of optimizations that wouldn't be otherwise possible on string source based minifiers. This approach causes Cross to be the slowest but yet the most effective in most situations, which is further evidenced in [goalsmashers' css minification benchmark](https://goalsmashers.github.io/css-minification-benchmark/).
+Unlike vast majority of other minifiers, Crass parses full CSS tree allowing it to perform all kind of optimizations that wouldn't be otherwise possible on string source based minifiers. This approach causes Crass to be the slowest but yet the most effective in most situations, which is further evidenced in [goalsmashers' css minification benchmark](https://goalsmashers.github.io/css-minification-benchmark/).
 
 ### Isn't Crass outdated and not maintained anymore?
 That's actually a hard question. Last commit in Crass repository comes from July 2019 and the last actual change in the library was back in February 2018 so it might feel a little abandoned. However, to this day Crass remains one of if not the most effective CSS minifier available in NPM repository and could be easily be claimed as feature-complete.
@@ -99,3 +93,10 @@ That's great! However, this repository is nothing more than a simple gulp wrappe
 
 ### ...but my bug is related just to Gulp plugin
 If you're sure that your issue is cased directly by my gulp plugin rather than Crass library, feel free to open a new GitHub Issue and I'll do my best to solve that problem as soon as possible!
+
+## Authors
+* [Matt Basta](http://mattbasta.com/) - Creator of `crass` library itself.
+* [Dawid Niedźwiedzki](https://dawid.niedzwiedzki.tech/) - Creator of `gulp-crass-minifier` wrapper.
+
+If you ever decide to contribute to `gulp-crass-minifier`, feel free to add yourself in here!
+
