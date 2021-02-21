@@ -1,3 +1,7 @@
+> :warning: **THIS REPOSITORY IS DISCONTINUED** :warning:
+>
+> Due to abandonment of the original library and not a single response from it's creator in regard to safety conserns, I've decided to abandon gulp-crass-minifier.
+
 # gulp-crass-minifier
 `gulp-crass-minifier` is [Gulp](https://gulpjs.com) plugin to minify CSS files using [Crass](https://github.com/mattbasta/crass/) library.
 
